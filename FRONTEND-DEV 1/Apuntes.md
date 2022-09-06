@@ -35,7 +35,7 @@ Aquellas etiquetas que envuelven a otras se las denomina “padres”. Es decir,
 Las etiquetas que son el contenido de otras, se las denomina “hijos”. Es decir, las etiquetas `<h1>`, `<p>`, `<ul>` son hijos de `<section>`, y a su vez las etiquetas `<li>` son hijos de `<ul>`.
 
 # Estructura básica de un documento HTML:
-````html
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
