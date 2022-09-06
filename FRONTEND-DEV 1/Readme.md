@@ -127,4 +127,20 @@ Selecciona todos los elementos que coincidan con las etiquetas HTML que contenga
 ```CSS
 <!--archivo HTML-->
 <div class="card"> Soy una carta </div>
+
+/* archivo CSS */
+.card {
+    /* Todas las etiquetas con la clase "card" */
+}
+```
+### Selector de identificador único (id)
+Selecciona el único elemento que coincida con la etiqueta HTML que contenga el atributo id. Solo puede existir un valor id para todo el documento.Para seleccionar el elemento, se empieza por el símbolo de hashtag `#` y seguido el valor exacto del atributo `id` de la etiqueta. Puede ser cualquier valor que desees colocar.
+```CSS
+<!--archivo HTML-->
+<button id="eliminar"> Eliminar  </button>
+
+/* archivo CSS */
+#eliminar {
+    /* La única etiqueta con el id "eliminar" */
+}
 ```
