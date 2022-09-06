@@ -63,4 +63,10 @@ La etiqueta `<head>` define la metainformación, es decir, toda información que
 La etiqueta `<body>` define el contenido de la página web. Debe ser hijo cercano de `<html>` y padre de todas las etiquetas HTML, excepto por aquellas que definan metainformación.
 
 ## Comentarios de HTML
-Los comentarios de HTML consiste en señalar algo que se ignorará. Para establecer un comentario HTML se lo envuelve entre <!-- y -->, independiente de la cantidad de líneas.
+Los comentarios de HTML consiste en señalar algo que se ignorará. Para establecer un comentario HTML se lo envuelve entre `<!-- y -->`, independiente de la cantidad de líneas.
+```HTML
+<!-- Este es un comentario de una línea -->
+<!--
+Este es un comentario de varias líneas
+-->
+```
