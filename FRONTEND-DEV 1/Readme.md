@@ -1,4 +1,23 @@
- # Proceso de renderizado del motor del navegador
+# ETIQUETAS: <a> https://htmlreference.io </a>
+```HTML
+<img alt >: alt= atributo para poner una segunda opcion por si no se realiza la funcion primaria
+<b>: Pone tu texto en negritas (pero esta etiqueta NO tiene sentido semántico).
+<strong>: También pone tu texto en negrita, pero esta SÍ tiene sentido semántico (Google le da relevancia al texto que pongas ahí).
+<i>: Pone tu texto en cursivas (pero esta etiqueta NO tiene sentido semántico).
+<em>: También pone tu texto en cursivas, pero esta SÍ tiene sentido semántico (Google le da relevancia al texto que pongas ahí).
+<br>: Hace un salto de línea, funciona como si diéramos un enter con el teclado 😄.
+<a>: Enlaces
+<h1-h6>: Textos Segun tamaño siendo 1 importante y 6 menso importante
+<p>: parrafos
+<span>: ayuda escribit dentro de textos palabras estlizadas
+<form>: formularios
+<ul> <li> <ol>: listas
+
+```
+
+
+
+# Proceso de renderizado del motor del navegador
 El motor del navegador realiza 5 pasos o procesos para compilar nuestro código hasta el renderizado por pantalla. Estos pasos son los siguientes:
 
 Transforma los archivos a un árbol de objetos HTML o CSS, estos se denominan DOM (Document Object Model) y CSSDOM (Cascade Style Sheet Object Model), respectivamente. Cada nodo en el árbol es una representación de los elementos que contiene el archivo HTML o CSS.
@@ -70,3 +89,8 @@ Los comentarios de HTML consiste en señalar algo que se ignorará. Para estable
 Este es un comentario de varias líneas
 -->
 ```
+
+# HTML SEMÁNTICO
+`<div>`
+
+Nos indica Propiedades adecuadas para cada una de las cosas, el codigo sea mas claro, ayuda a ser accesible.
