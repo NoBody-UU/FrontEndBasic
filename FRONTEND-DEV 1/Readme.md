@@ -98,4 +98,33 @@ Nos indica Propiedades adecuadas para cada una de las cosas, el codigo sea mas c
 
 
 # CSS
+Una declaración de CSS es un bloque que especifica el conjunto de estilos que se añadirán a un elemento HTML. Su estructura contiene lo siguiente:
 
+1. Selector: define el elemento o conjunto de elementos a los cuales se añadirán los estilos.
+2. Propiedad: es el nombre del estilo de CSS.
+3. Valor: es el valor que tomará la propiedad.
+
+## Propiedades iniciales de CSS
+Antes de empezar con CSS utilizaremos algunas propiedades de CSS.
+
+**color:** establece el color del texto de un elemento.
+**background-color:** establece un color de fondo al elemento.
+**font-size:** establece el tamaño de la fuente.
+**width:** establece la anchura de un elemento.
+**height:** establece la altura de un elemento.
+
+## TIPOS DE SELECTORES
+### Selector de Tipo
+Selecciona todos los elementos que coincidan con el nombre de la etiqueta HTML.
+
+```CSS
+div {
+    /* Todos los div en el documento */
+}
+```
+### Selector de clase
+Selecciona todos los elementos que coincidan con las etiquetas HTML que contengan el atributo class.
+```CSS
+<!--archivo HTML-->
+<div class="card"> Soy una carta </div>
+```
