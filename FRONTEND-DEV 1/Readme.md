@@ -1,4 +1,4 @@
-# ETIQUETAS: <a> https://htmlreference.io </a>
+# ETIQUETAS: <a href="https://htmlreference.io "> Guia Aqui </a>
 ```HTML
 <img alt >: alt= atributo para poner una segunda opcion por si no se realiza la funcion primaria
 <b>: Pone tu texto en negritas (pero esta etiqueta NO tiene sentido semántico).
