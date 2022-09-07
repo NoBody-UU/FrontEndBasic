@@ -6,7 +6,7 @@
 <strong>: También pone tu texto en negrita, pero esta SÍ tiene sentido semántico (Google le da relevancia al texto que pongas ahí).
 <i>: Pone tu texto en cursivas (pero esta etiqueta NO tiene sentido semántico).
 <em>: También pone tu texto en cursivas, pero esta SÍ tiene sentido semántico (Google le da relevancia al texto que pongas ahí).
-<br>: Hace un salto de línea, funciona como si diéramos un enter con el teclado 😄.
+<br>: Hace un salto de línea, funciona como si diéramos un enter con el teclado .
 <a>: Enlaces
 <h1-h6>: Textos Segun tamaño siendo 1 importante y 6 menso importante
 <p>: parrafos
@@ -97,7 +97,7 @@ Este es un comentario de varias líneas
 Nos indica Propiedades adecuadas para cada una de las cosas, el codigo sea mas claro, ayuda a ser accesible.
 
 
-# CSS
+# CSS <a href="https://htmlcolorcodes.com/es/">COLORES HTML</a>
 Una declaración de CSS es un bloque que especifica el conjunto de estilos que se añadirán a un elemento HTML. Su estructura contiene lo siguiente:
 
 1. Selector: define el elemento o conjunto de elementos a los cuales se añadirán los estilos.
@@ -142,5 +142,150 @@ Selecciona el único elemento que coincida con la etiqueta HTML que contenga el 
 /* archivo CSS */
 #eliminar {
     /* La única etiqueta con el id "eliminar" */
+}
+```
+### Selector de atributo
+Selecciona los elementos que coincidan con la etiqueta HTML que contenga el atributo y valor especificado.
+```html
+<!--archivo HTML-->
+<a href="https://platzi.com"> Ir a Platzi </a>
+```
+Para seleccionar los elementos, se empieza por el nombre de la etiqueta, seguido de corchetes [] que contiene el atributo y valor especificado.
+```css
+/* archivo CSS */
+a[href="url"] {
+    /* Todas las etiquetas <a> con una propiedad href con valor "https://platzi.com" */
+}
+```
+### Selector universal
+Selecciona todos los elementos del documento mediante un asterisco *.
+```CSS
+* {
+    /* Todos los elementos */
+}```
+
+### selectores combinadores
+Un selector combinador es la unión de dos o más selectores básicos.
+```css
+selector1 selector2 selector3 {
+    /* Estilos */
+}
+```
+#### 1. Combinador de descendientes
+Selecciona todos los elementos del selector de la derecha que son hijos del selector de la izquierda, independientemente de la profundidad. Estos selectores están separados por un espacio.
+```css
+padre hijos {
+    /* Todos los hijos del padre */
+}
+
+div p{
+    /* Todos los hijos <p> de <div>*/
+}
+
+.container img{
+    /* Todos los hijos <img> de la clase "container"*/
+}
+```
+#### 2. Combinador de hijo directo
+Selecciona todos los elementos del selector de la derecha que son hijos directos del selector de la izquierda. Estos selectores están separados por `>`.
+```css
+padre > hijos_directos {
+    /* Todos los hijos directos del padre */
+}
+
+div > p{
+    /* Todos los hijos directos <p> de <div>*/
+}
+
+.container > img{
+    /* Todos los hijos directos <img> de la clase "container"*/
+}
+```
+#### 3. Combinador de elemento adyacente
+Selecciona todos los elementos del selector de la derecha que están adyacente al selector de la izquierda. Estos selectores están separados por `+`.
+```css
+elemento + adyacente {
+    /* Elementos adyacentes */
+}
+
+div + p{
+    /* Todos los <p> adyacentes a <div>*/
+}
+
+.container + img{
+    /* Todos los <img> adyacentes a la clase "container"*/
+}
+```
+Adyacente significa que comparten el mismo padre y está situado inmediatamente hacia abajo de otro elemento. Por ejemplo, en el siguiente código, `<div>` está adyacente a `<h1>` y `<p>` está adyacente a `<div>.` Sin embargo, `<h1>` no está adyacente a `<div>` y `<div>` no está adyacente a `<p>`.
+```html
+<!--archivo HTML -->
+<h1>Soy un título </h1>
+<div>Soy un div</div>
+<p>Soy un párrafo</p>
+```
+#### 4. Combinador general de hermanos
+Selecciona todos los elementos del selector de la derecha que son hermanos del selector de la izquierda. Estos selectores están separados por `~`.
+Hermanos significa que comparten el mismo padre y están situados hacia abajo de otro elemento. Por ejemplo, en el siguiente código, <div> y `<p>` son hermanos de `<h1>`, pero `<h1>` no es hermano de `<div>` y `<p>`.
+
+
+## Tipos de selectores: pseudoclases y pseudoelementos
+### Pseudoclases
+Una pseudoclase define el estilo de un estado especial de un elemento.También podemos ver a las pseudoclases como estados de algún elemento (con el mouse encima, visitado, activo, etc.)
+
+<a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes#indice_de_las_pseudo-clases_est%C3%A1ndar">Índice de pseudo-clases estándar.</a>
+
+#### Sintaxis:
+
+```css
+selector : pseudoclase { 
+    propiedad: valor;
+}
+```
+### Pseudoselementos
+Un pseudoelemento define el estilo de una parte específica de un elemento, elementos que escribimos desde CSS, por ejemplo, el `::after` y el `::before` nos puedes funcionar como divs, como su nombre lo dice, son elementos, pero no necesariamente están escritos desde el HTML 
+
+<a href="https://developer.mozilla.org/es/docs/web/css/pseudo-elements#lista_de_pseudoelementos">Lista de pseudo-elementos.</a>
+
+#### Sintaxis
+
+```css
+selector :: pseudo-elemento { 
+    propiedad: valor;
+}
+```
+
+## Cascada y especificidad en CSS
+### la cascada en CSS
+La cascada es el concepto que determina qué estilos se colocan sobre otros, priorizando a aquellos que se encuentren más abajo del código. Recordarás que CSS es la abreviación de Cascade Style Sheets, que traducido es hojas de estilos en Cascada.
+Mira el siguiente código e identifica de qué color de letra tendrá la etiqueta `<h1>`.
+```css
+h1 {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
+```
+La etiqueta `<h1>` tendrá un color `blue` de letra, esto porque está situado más abajo en el código. Esto ocurre con cada propiedad de CSS que se repita en algún punto más arriba del código.
+
+### Especificidad en CSS
+La especificidad consiste en dar un valor a una regla CSS sobre qué tan específico es el estilo, esto para que los navegadores puedan saber qué estilos aplicar sobre otros, independientemente de dónde se encuentren en el código. El estilo se aplicará donde la especificidad sea mayor.
+La palabra reservada !important es un valor de toda propiedad CSS que provee una especificidad de 10000, por lo que se aplicará ante otros estilos. Esto es una mala práctica y no deberías utilizarlo.
+```css
+h1 {
+  color: red;
+}
+
+h1 {
+  color: green !important; //ESTE SERA EL COLOR A MOSTRAR
+}
+
+h1 {
+  color: blue;
+}
+
+h1 {
+  color: papayawhip;
 }
 ```
