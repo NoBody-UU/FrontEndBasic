@@ -1,3 +1,7 @@
+<h1>HTML Y CSS  <a href="https://github.com/NoBody-UU/FrontEndBasic">Repositorio</a> </h1>
+<h3>By:NoBody-Huber</h3>
+<p>Esto es una pequeña guia acerca de html y css, espero te sirva, cualquier duda, aporte o lo que sea dc: NoBody#9666</p>
+
 # HTML
 ## ETIQUETAS: <a href="https://htmlreference.io "> Guia Aqui </a>
 ```HTML
